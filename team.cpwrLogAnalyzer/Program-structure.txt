@@ -1,0 +1,8 @@
+Program structure
+	I/O
+		Log directory
+			1-n Log Files
+	Reader
+		read log enter
+		analyze log entry
+			is it part of a group, then groups gets a pointer to the log entry.
