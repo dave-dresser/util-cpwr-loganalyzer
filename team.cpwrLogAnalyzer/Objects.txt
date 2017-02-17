@@ -1,0 +1,46 @@
+Log: is contained in a series of files Compuware.log - Compuware(n).log
+	Log has levels of logging.  Of most interest is whether Debug logging is active.
+		The levels will affect the best determination for other area's. For
+		example the determination of session start and end.
+	Series of LogEntries
+		LogEntry : File : RowNumber : Timestamp
+		
+
+Session: A log has within it 1 to n sessions.  A session is bounded by a startup 
+		and shutdown of Topaz.
+	Duration
+	
+Significant Events:	
+	Diagnostic Tracing: Within a Session one or more diagnostic tracing events.
+	Exceptions:
+	Error logging: series of uninterrupted error log rows.
+	Framework events 
+		Service publish/unpublish
+		Bundle start/stop
+		...
+
+LogWindow: A bounded range of log entries.
+	Could be sized on the number of log entries.
+	Could be sized on elapsed time, e.g. 30 seconds.
+	
+Stats:
+	Number of sessions
+	Number of Exceptions
+	Number of Nonexception Error logs
+	
+Conversations with HCI
+	Direct
+	Server
+	
+Conversations with Xpediter
+	TSO
+	CICS
+	
+Namespace - Containers for bundles found in the log
+	e.g. org.eclipse, com.compuware
+	by level 1st level, 2nd level
+	
+Bundles - contained within a Namespace
+	- Attributes
+		- version
+	
